@@ -59,7 +59,7 @@ class AddFragment : Fragment() {
             Toast.makeText(requireContext(), "Successfully Added", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }else{
-            Toast.makeText(requireContext(), "Try Again", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show()
         }
     }
 
