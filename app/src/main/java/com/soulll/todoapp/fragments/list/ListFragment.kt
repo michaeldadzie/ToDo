@@ -56,7 +56,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
     private fun setUpRecyclerView() {
         val recyclerView = binding.recyclerView
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.itemAnimator = SlideInUpAnimator().apply {
             addDuration = 300
         }
