@@ -39,9 +39,7 @@ class SharedViewModel(application: Application):AndroidViewModel(application) {
     }
 
     fun verifiedDataFromUser(title: String, description: String):Boolean {
-        return if(TextUtils.isEmpty(title) || TextUtils.isEmpty(description)) {
-            false
-        }else !(title.isEmpty() || description.isEmpty())
+        return !(title.isEmpty() || description.isEmpty())
     }
 
     fun parsePriority(priority: String): Priority {
@@ -56,13 +54,5 @@ class SharedViewModel(application: Application):AndroidViewModel(application) {
         }
     }
 
-    //Convert priority to Int
-//    fun parsePriorityToInt(priority: Priority):Int {
-//        return when(priority){
-//            Priority.HIGH -> 0
-//            Priority.MEDIUM -> 1
-//            Priority.LOW -> 2
-//        }
-//    }
 
 }
